@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: jobly-frontend
+    env: static
+    buildCommand: npm install && npm run build
+    publish:
+      path: dist
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: VITE_BASE_URL
+        value: https://api.example.com
