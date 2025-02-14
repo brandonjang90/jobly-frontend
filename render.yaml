@@ -9,4 +9,4 @@ services:
       - key: NODE_ENV
         value: production
       - key: VITE_BASE_URL
-        value: https://api.example.com
+        value: https://jobly-backend-zzi7.onrender.com
