@@ -17,7 +17,7 @@ export default defineConfig({
     },
   },
   build: {
-    minify: false,  // Disable minification to avoid eval-like issues during builds
+    minify: true
   },
   optimizeDeps: {
     include: ["jwt-decode"],  // Force Vite to pre-bundle jwt-decode correctly
