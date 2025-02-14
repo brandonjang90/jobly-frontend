@@ -17,7 +17,8 @@ export default defineConfig({
     },
   },
   build: {
-    minify: true
+    minify: true,
+    outDir: 'dist'
   },
   optimizeDeps: {
     include: ["jwt-decode"],  // Force Vite to pre-bundle jwt-decode correctly

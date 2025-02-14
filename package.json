@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "clean": "rm -rf .vite-temp",
+    "postinstall": "npm install @vitejs/plugin-react"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.6",
