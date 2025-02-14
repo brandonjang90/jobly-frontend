@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import CompanyCard from './CompanyCard';
+import JoblyApi from './api';
+
 
 function CompanyList() {
   const [allCompanies, setAllCompanies] = useState([]); // Full list of companies
@@ -9,8 +11,7 @@ function CompanyList() {
   useEffect(() => {
     async function fetchCompanies() {
       try {
-        const response = await fetch(`/api/companies`);
-        const data = await response.json();
+        const data = await JoblyApi.request(`companies`);
 
         if (data.companies && Array.isArray(data.companies)) {
           setAllCompanies(data.companies);  // Extract the array from data.companies
